@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page </title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <div class="container">
+        <div class="left-section">
+            <div class="contact-info">
+                <div class="image-container">
+                    <a href="page1.html">
+                       
+                      <img src="facebook.png" width="40" height="40" alt="facebook" />
+                    </a>
+                    <a href="page2.html">
+                      <img src="instagram.jpg" width="40" height="40" alt="instagram"  />
+                    </a>
+                    <a href="page3.html">
+                      <img src="whatsapp.png"  width="40" height="40"alt="whatsapp"  />
+                    </a>
+                    <a href="page4.html">
+                      <img src="mail.png" alt="Gmail" width="40" height="40" />
+                    </a>
+                  </div>
+                  
+                  
+            </div>
+        </div>
+        <div class="right-section">
+            <div class="logo">Paramount Boarding High School</div>
+            <div class="login-box">
+                <h2>Login to Your Account</h2>
+                <form onsubmit="redirectToNextPage(event)">
+                    <label for="email">Email Address :</label>
+                    <input type="email" id="email" placeholder="Enter your email address">
+
+                    <label for="password">Password :</label>
+                    <input type="password" id="password" placeholder="Enter your password">
+                    
+                    <button type="submit"  >Login</button>
+                    
+
+                    <!-- <div class="signup">
+                        Don’t have an account? <a href="#">Sign Up now</a>
+                    </div> -->
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+
+</body>
+</html>

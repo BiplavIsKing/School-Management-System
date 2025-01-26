@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admit Card Application</title>
+    <style>
+        body {
+            font-family: 'Poppins', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            color: #212529;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border: 2px solid #003366;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .container h2 {
+            text-align: center;
+            color: #003366;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #003366;
+        }
+
+        input, select, button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 2px solid #003366;
+            border-radius: 5px;
+            font-size: 1rem;
+            background-color: #ffffff;
+            color: #003366;
+            outline: none;
+        }
+
+        input:focus, select:focus, button:hover {
+            border-color: #0056b3;
+            box-shadow: 0 0 5px #0056b3;
+        }
+
+        button {
+            cursor: pointer;
+            background-color: #003366;
+            color: #ffffff;
+            font-weight: bold;
+            transition: background-color 0.3s, box-shadow 0.3s;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .result {
+            margin-top: 20px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        .result a {
+            color: #003366;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-block;
+            margin-top: 10px;
+            border: 2px solid #003366;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: color 0.3s, background-color 0.3s, box-shadow 0.3s;
+        }
+
+        .result a:hover {
+            color: #ffffff;
+            background-color: #0056b3;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Admit Card Application</h2>
+        <form id="admitCardForm">
+            <div class="form-group">
+                <label for="studentName">Student Name</label>
+                <input type="text" id="studentName" placeholder="Enter your name" required>
+            </div>
+            <div class="form-group">
+                <label for="studentID">Student ID</label>
+                <input type="text" id="studentID" placeholder="Enter your student ID" required>
+            </div>
+            <div class="form-group">
+                <label for="feeStatus">Fee Payment Status</label>
+                <select id="feeStatus" required>
+                    <option value="">-- Select Payment Status --</option>
+                    <option value="paid">Paid</option>
+                    <option value="not_paid">Not Paid</option>
+                </select>
+            </div>
+            <button type="submit">Apply for Admit Card</button>
+        </form>
+        <div class="result" id="result"></div>
+    </div>
+
+    <script>
+        const form = document.getElementById('admitCardForm');
+        const resultDiv = document.getElementById('result');
+
+        form.addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const name = document.getElementById('studentName').value.trim();
+            const id = document.getElementById('studentID').value.trim();
+            const feeStatus = document.getElementById('feeStatus').value;
+
+            if (!name || !id || !feeStatus) {
+                alert('Please fill in all fields!');
+                return;
+            }
+
+            if (feeStatus === 'paid') {
+                resultDiv.innerHTML = `
+                    <p>Thank you, ${name} (ID: ${id}). Your payment is confirmed!</p>
+                    <a href="#" download="AdmitCard.pdf">Download Admit Card</a>
+                `;
+            } else {
+                resultDiv.innerHTML = `
+                    <p>Dear ${name} (ID: ${id}), you have not completed your payment. A temporary admit card valid for 3 days has been issued.</p>
+                    <a href="#" download="TemporaryAdmitCard.pdf">Download Temporary Admit Card</a>
+                `;
+            }
+        });
+    </script>
+</body>
+</html>

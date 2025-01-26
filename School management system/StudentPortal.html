@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Self Service</title>
+    <style>
+        body {
+            font-family: 'Poppins', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #0a192f;
+            color: #e0e8f0;
+        }
+    
+        header {
+            background-color: #001f3f;
+            color: #e0e8f0;
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+    
+        header h1 {
+            margin: 0;
+            font-size: 1.8rem;
+            letter-spacing: 1px;
+        }
+    
+        header a {
+            color: #66fcf1;
+            text-decoration: none;
+            margin-left: 25px;
+            font-size: 1rem;
+            transition: color 0.3s;
+        }
+    
+        header a:hover {
+            color: #45a29e;
+        }
+    
+        .sidebar {
+            width: 260px;
+            background-color: #011c3c;
+            color: #e0e8f0;
+            height: 100vh;
+            position: fixed;
+            overflow-y: auto;
+            box-shadow: 3px 0 10px rgba(0, 0, 0, 0.2);
+        }
+    
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+    
+        .sidebar ul li {
+            padding: 15px 25px;
+            font-size: 1.1rem;
+            transition: background-color 0.3s, box-shadow 0.3s;
+        }
+    
+        .sidebar ul li:hover {
+            background-color: #004080;
+            box-shadow: inset 3px 0 5px rgba(102, 252, 241, 0.4);
+            cursor: pointer;
+        }
+    
+        .content {
+            margin-left: 280px;
+            padding: 30px;
+        }
+    
+        .content h2 {
+            color: #66fcf1;
+            font-size: 2rem;
+            margin-bottom: 20px;
+            letter-spacing: 1px;
+        }
+    
+        .link-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
+    
+        .link-card {
+            background-color: #001f3f;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+    
+        .link-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 20px rgba(102, 252, 241, 0.4);
+        }
+    
+        .link-card a {
+            text-decoration: none;
+            color: #66fcf1;
+            font-weight: bold;
+            font-size: 1.1rem;
+            display: block;
+            margin-top: 10px;
+        }
+    
+        .link-card a:hover {
+            color: #45a29e;
+        }
+    
+        .link-card img {
+            width: 60px;
+            height: 60px;
+            margin-bottom: 15px;
+            transition: transform 0.3s;
+        }
+    
+        .link-card img:hover {
+            transform: scale(1.1);
+        }
+    </style>
+    
+</head>
+<body>
+    <header>
+        <h1>Student Self Service</h1>
+        <div>
+            <a href="#">Help</a>
+            <a href="#">Log Off</a>
+        </div>
+    </header>
+
+    <div class="sidebar">
+        <ul>
+            <li>Library</li>
+            <li>Books</li>
+            <li>Admit Card</li>
+            <li>Additional Documents</li>
+            <li>Exam Booking</li>
+            <li>Class Time Table</li>
+            <li>Mentor and Class Teacher Details </Details></li>
+            <li>Complaint</li>
+            <li>Past Year Questions</li>
+            <li>10 Sets</li>
+            <li>Bus Routes</li>
+            <li>Hostel and Canteen</li>
+            <li>Leave Application</li>
+            <li>Contact Authority</li>
+        </ul>
+    </div>
+
+    <div class="content">
+        <h2>Available Services</h2>
+        <div class="link-section">
+            <div class="link-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8u6BJwwfQmBMCvPKeIL_PJcV1bylJ0zju9A&s" alt="Icon">
+                <a href="#">Attendence</a>
+            </div>
+            <div class="link-card">
+                <img src="https://cdn3d.iconscout.com/3d/premium/thumb/syllabus-3d-icon-download-in-png-blend-fbx-gltf-file-formats--course-education-study-school-university-element-pack-icons-6507980.png" alt="Icon">
+                <a href="#">Syllabus</a>
+            </div>
+            <div class="link-card">
+                <img src="https://img.freepik.com/premium-vector/vector-icon-books-with-square-circle-background_518965-305.jpg" alt="Icon">
+                <a href="#">Academic Program</a>
+            </div>
+            <div class="link-card">
+                <img src="https://cdn-icons-png.freepik.com/256/12617/12617972.png?semt=ais_hybrid" alt="Icon">
+                <a href="#">Facilities</a>
+            </div>
+            <div class="link-card">
+                <img src="https://cdn-icons-png.flaticon.com/512/10384/10384161.png" alt="Icon">
+                <a href="#">Account Section</a>
+            </div>
+            <div class="link-card">
+                <img src="https://png.pngtree.com/png-vector/20190425/ourmid/pngtree-vector-teaching-icon-png-image_992057.jpg" alt="Icon">
+                <a href="#">Faculty/Facility Feedback</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
