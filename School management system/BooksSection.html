@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Books Publications</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #0a192f; /* Dark blue background */
+            color: #ccd6f6; /* Light text color */
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #64ffda; /* Teal accent color */
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #112240; /* Darker blue container */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 10px;
+            color: #64ffda; /* Teal accent color */
+        }
+
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            border: 2px solid #64ffda; /* Teal border */
+            background-color: #0a192f; /* Dark blue background */
+            color: #ccd6f6; /* Light text color */
+            font-size: 1rem;
+            cursor: pointer;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        select:hover {
+            border-color: #64ffda; /* Teal border on hover */
+            box-shadow: 0 0 10px #64ffda; /* Glow effect */
+        }
+
+        .books-list {
+            display: none;
+            margin-top: 20px;
+        }
+
+        .books-list h2 {
+            margin-top: 0;
+            color: #64ffda; /* Teal accent color */
+            font-size: 1.8rem;
+        }
+
+        .books-list ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .books-list ul li {
+            background: #233554; /* Dark blue list item background */
+            margin-bottom: 10px;
+            padding: 15px;
+            border-radius: 5px;
+            border: 1px solid #1f2e48; /* Darker border */
+            color: #ccd6f6; /* Light text color */
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .books-list ul li:hover {
+            transform: translateY(-5px); /* Lift effect on hover */
+            box-shadow: 0 0 15px #64ffda; /* Glow effect */
+            border-color: #64ffda; /* Teal border on hover */
+        }
+
+        /* Glow effect for dropdown */
+        select:focus {
+            outline: none;
+            border-color: #64ffda;
+            box-shadow: 0 0 15px #64ffda;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Student Books Publications</h1>
+        
+        <label for="class-select">Select Your Class:</label>
+        <select id="class-select">
+            <option value="">--Choose a Class--</option>
+            <option value="Nursery">Nursery</option>
+            <option value="LKG">LKG</option>
+            <option value="UKG">UKG</option>
+            <option value="1">Class 1</option>
+            <option value="2">Class 2</option>
+            <option value="3">Class 3</option>
+            <option value="4">Class 4</option>
+            <option value="5">Class 5</option>
+            <option value="6">Class 6</option>
+            <option value="7">Class 7</option>
+            <option value="8">Class 8</option>
+            <option value="9">Class 9</option>
+            <option value="10">Class 10</option>
+        </select>
+
+        <!-- Nursery Books -->
+        <div id="nursery-books" class="books-list">
+            <h2>Nursery Books</h2>
+            <ul>
+                <li>Book 1: ABC Learning</li>
+                <li>Book 2: Numbers Fun</li>
+                <li>Book 3: Rhymes and Stories</li>
+            </ul>
+        </div>
+
+        <!-- LKG Books -->
+        <div id="lkg-books" class="books-list">
+            <h2>LKG Books</h2>
+            <ul>
+                <li>Book 1: Basic English</li>
+                <li>Book 2: Math for Kids</li>
+                <li>Book 3: Environmental Studies</li>
+            </ul>
+        </div>
+
+        <!-- UKG Books -->
+        <div id="ukg-books" class="books-list">
+            <h2>UKG Books</h2>
+            <ul>
+                <li>Book 1: Advanced English</li>
+                <li>Book 2: Math for Beginners</li>
+                <li>Book 3: Science for Kids</li>
+            </ul>
+        </div>
+
+        <!-- Class 1 Books -->
+        <div id="1-books" class="books-list">
+            <h2>Class 1 Books</h2>
+            <ul>
+                <li>Book 1: English Grammar</li>
+                <li>Book 2: Mathematics</li>
+                <li>Book 3: Science</li>
+                <li>Book 4: Social Studies</li>
+            </ul>
+        </div>
+
+        <!-- Class 2 Books -->
+        <div id="2-books" class="books-list">
+            <h2>Class 2 Books</h2>
+            <ul>
+                <li>Book 1: English Literature</li>
+                <li>Book 2: Mathematics - Level 2</li>
+                <li>Book 3: Science - Basics</li>
+                <li>Book 4: Social Studies - Our World</li>
+            </ul>
+        </div>
+
+        <!-- Class 3 Books -->
+        <div id="3-books" class="books-list">
+            <h2>Class 3 Books</h2>
+            <ul>
+                <li>Book 1: English - Reading and Writing</li>
+                <li>Book 2: Mathematics - Level 3</li>
+                <li>Book 3: Science - Exploring Nature</li>
+                <li>Book 4: Social Studies - Communities</li>
+            </ul>
+        </div>
+
+        <!-- Class 4 Books -->
+        <div id="4-books" class="books-list">
+            <h2>Class 4 Books</h2>
+            <ul>
+                <li>Book 1: English - Grammar and Composition</li>
+                <li>Book 2: Mathematics - Level 4</li>
+                <li>Book 3: Science - Earth and Space</li>
+                <li>Book 4: Social Studies - History and Geography</li>
+            </ul>
+        </div>
+
+        <!-- Class 5 Books -->
+        <div id="5-books" class="books-list">
+            <h2>Class 5 Books</h2>
+            <ul>
+                <li>Book 1: English - Advanced Grammar</li>
+                <li>Book 2: Mathematics - Level 5</li>
+                <li>Book 3: Science - Physics and Chemistry</li>
+                <li>Book 4: Social Studies - Civics and Culture</li>
+            </ul>
+        </div>
+
+        <!-- Class 6 Books -->
+        <div id="6-books" class="books-list">
+            <h2>Class 6 Books</h2>
+            <ul>
+                <li>Book 1: English - Literature and Writing</li>
+                <li>Book 2: Mathematics - Level 6</li>
+                <li>Book 3: Science - Biology and Environment</li>
+                <li>Book 4: Social Studies - World History</li>
+            </ul>
+        </div>
+
+        <!-- Class 7 Books -->
+        <div id="7-books" class="books-list">
+            <h2>Class 7 Books</h2>
+            <ul>
+                <li>Book 1: English - Advanced Composition</li>
+                <li>Book 2: Mathematics - Level 7</li>
+                <li>Book 3: Science - Physics and Chemistry</li>
+                <li>Book 4: Social Studies - Geography and Civics</li>
+            </ul>
+        </div>
+
+        <!-- Class 8 Books -->
+        <div id="8-books" class="books-list">
+            <h2>Class 8 Books</h2>
+            <ul>
+                <li>Book 1: English - Literature and Grammar</li>
+                <li>Book 2: Mathematics - Level 8</li>
+                <li>Book 3: Science - Biology and Chemistry</li>
+                <li>Book 4: Social Studies - History and Civics</li>
+            </ul>
+        </div>
+
+        <!-- Class 9 Books -->
+        <div id="9-books" class="books-list">
+            <h2>Class 9 Books</h2>
+            <ul>
+                <li>Book 1: English - Advanced Writing</li>
+                <li>Book 2: Mathematics - Level 9</li>
+                <li>Book 3: Science - Physics, Chemistry, Biology</li>
+                <li>Book 4: Social Studies - Economics and Geography</li>
+            </ul>
+        </div>
+
+        <!-- Class 10 Books -->
+        <div id="10-books" class="books-list">
+            <h2>Class 10 Books</h2>
+            <ul>
+                <li>Book 1: English - Literature and Grammar</li>
+                <li>Book 2: Mathematics - Level 10</li>
+                <li>Book 3: Science - Physics, Chemistry, Biology</li>
+                <li>Book 4: Social Studies - History and Civics</li>
+            </ul>
+        </div>
+
+    </div>
+
+    <script>
+        document.getElementById('class-select').addEventListener('change', function() {
+            // Hide all book lists
+            document.querySelectorAll('.books-list').forEach(function(bookList) {
+                bookList.style.display = 'none';
+            });
+
+            // Show the selected class's book list
+            const selectedClass = this.value.toLowerCase();
+            if (selectedClass) {
+                const bookListId = selectedClass + '-books';
+                const bookList = document.getElementById(bookListId);
+                if (bookList) {
+                    bookList.style.display = 'block';
+                }
+            }
+        });
+    </script>
+
+</body>
+</html>
